@@ -8,6 +8,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     zoom: 150%;
+
 }
 .toggleElement{
     display: none;
@@ -17,29 +18,30 @@ body{
     background-color: #ccc;
     width: 50px;
     height: 25px;
-    border-radius: 11px;
+    border-radius: 100px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     cursor: pointer;
     position: relative;
-    transition: 0.3s;
+    transition: 0.2s ease;
 }
 .switchLabel::after{
     content:"";
     position: absolute;
     width: 19px;
     height: 19px;
-    background-color: white;
+    background-color: black;
     top: 3px;
     left: 3px;
     border-radius: 100px;
-    transition: 0.5s;
+    transition: background-color 2s ease, transform 0.2s ease;
 }
 .toggleElement:checked + .switchLabel::after{
     transform: translate(23px);
+    background-color: #FFF6E8; /*same color*/
 }
 .toggleElement:checked + .switchLabel{
-    background-color: #a7c96c;
+    background-color: #b3ca89;
 }
 body:has(.toggleElement:checked){
-    background-color: #FFF6E8;
+    background-color: #FFF6E8; /*same color*/
 }
