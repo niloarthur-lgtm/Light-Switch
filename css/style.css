@@ -1,0 +1,44 @@
+body{
+    background-color: #212121;
+    transition: 2s;
+}
+.switchContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggleElement{
+    display: none;
+}
+.switchLabel{
+    display: block;
+    background-color: #ccc;
+    width: 50px;
+    height: 25px;
+    border-radius: 11px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.switchLabel::after{
+    content:"";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: white;
+    top: 3px;
+    left: 3px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+.toggleElement:checked + .switchLabel::after{
+    transform: translate(23px);
+}
+.toggleElement:checked + .switchLabel{
+    background-color: #a7c96c;
+}
+body:has(.toggleElement:checked){
+    background-color: #FFF6E8;
+}
