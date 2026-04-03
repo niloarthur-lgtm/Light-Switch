@@ -6,8 +6,8 @@
 
 :root {
     --time-color: 0.3s;
-    --off-dark:#000;
-    --on-light:#ffffff;
+    --off-dark: #000;
+    --on-light: #ffffff;
 
 }
 
@@ -31,14 +31,13 @@ body {
 }
 
 .switchLabel {
-    display: block;
+    display: flex;
     background-color: #ccc;
     width: 50px;
     height: 25px;
     border-radius: 100px;
     cursor: pointer;
     position: relative;
-    /* transition: 0.1s ease; */
 
 }
 
@@ -67,15 +66,21 @@ body:has(.toggleElement:checked) {
     background-color: var(--on-light);
 }
 
-.switchLabel h1 {
+.switchLabel span {
+    display: inline-block;
     font-size: 10px;
-    padding: 7px;
+    font-weight: bold;
+    padding-top: 7px;
+    /* no bottom */
+    margin-left:7px;
+    /* no right */
+    gap: 0px;
 
     user-select: none;
     transition: var(--time-color);
 }
 
 
-.toggleElement:checked+.switchLabel h1 {
-    color:  var(--on-light);
+.toggleElement:checked+.switchLabel span {
+    color: var(--on-light);
 }
