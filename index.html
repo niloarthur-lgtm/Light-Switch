@@ -13,7 +13,8 @@
     <div class="switchContainer notranslate" translate="no" role="switch">
         <input type="checkbox" role="switch" class="toggleElement" id="toggle1">
         <label for="toggle1" class="switchLabel">
-           <h1>On   Off</h1>
+                <span aria-hidden="true">On</span><span aria-hidden="true">Off</span>
+                <!-- aria-hidden="true" added to screen reading -->
         </label>
     </div>
     <audio src="sounds/light_switch_click.wav" id="sound1"></audio>
