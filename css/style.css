@@ -3,11 +3,16 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 :root {
-    --time-color: 1s;
+    --time-color: 0.3s;
+    --off-dark:#000;
+    --on-light:#ffffff;
+
 }
+
 body {
-    background-color: #000;
+    background-color: var(--off-dark);
     transition: var(--time-color);
 }
 
@@ -31,10 +36,9 @@ body {
     width: 50px;
     height: 25px;
     border-radius: 100px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     position: relative;
-    transition: 0.2s ease;
+    /* transition: 0.1s ease; */
 
 }
 
@@ -43,16 +47,16 @@ body {
     position: absolute;
     width: 19px;
     height: 19px;
-    background-color: black;
+    background-color: var(--off-dark);
     top: 3px;
     left: 3px;
     border-radius: 100px;
-    transition: background-color var(--time-color) ease, transform 0.2s ease; 
+    transition: background-color var(--time-color) ease, transform 0.2s ease;
 }
 
 .toggleElement:checked+.switchLabel::after {
     transform: translate(25px);
-    background-color: #FFF6E8;
+    background-color: var(--on-light);
 }
 
 .toggleElement:checked+.switchLabel {
@@ -60,7 +64,7 @@ body {
 }
 
 body:has(.toggleElement:checked) {
-    background-color: #FFF6E8;
+    background-color: var(--on-light);
 }
 
 .switchLabel h1 {
@@ -73,5 +77,5 @@ body:has(.toggleElement:checked) {
 
 
 .toggleElement:checked+.switchLabel h1 {
-    color: #FFF6E8;
+    color:  var(--on-light);
 }
