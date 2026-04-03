@@ -22,8 +22,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     zoom: 200%;
-
 }
 
 .toggleElement {
@@ -66,20 +66,30 @@ body:has(.toggleElement:checked) {
     background-color: var(--on-light);
 }
 
-.switchLabel span {
+.switchLabel span:nth-child(1) {
     display: inline-block;
     font-size: 10px;
     font-weight: bold;
     padding-top: 7px;
     /* no bottom */
-    margin-left:7px;
+    margin-left: 7px;
     /* no right */
-    gap: 0px;
-
     user-select: none;
     transition: var(--time-color);
 }
 
+.switchLabel span:nth-child(2) {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 7px;
+    /* no bottom */
+    margin-left: 8px;
+    /* no right */
+    /* +1px */
+    user-select: none;
+    transition: var(--time-color);
+}
 
 .toggleElement:checked+.switchLabel span {
     color: var(--on-light);
