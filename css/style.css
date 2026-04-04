@@ -31,6 +31,11 @@ body {
     display: none;
 }
 
+input[type="checkbox"]:focus + label {
+  outline: none;
+    /*remove click browser effect*/
+}
+
 .switchLabel {
     display: flex;
     background-color: #ccc;
