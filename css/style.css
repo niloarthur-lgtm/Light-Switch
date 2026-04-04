@@ -31,11 +31,6 @@ body {
     display: none;
 }
 
-input[type="checkbox"]:focus + label {
-  outline: none;
-    /*remove click browser effect*/
-}
-
 .switchLabel {
     display: flex;
     background-color: #ccc;
@@ -47,7 +42,8 @@ input[type="checkbox"]:focus + label {
     box-sizing: border-box;
     padding: 7px;
     justify-content: space-between;
-    outline:none;
+    -webkit-tap-highlight-color: transparent;
+    /*remove highlight on mobile*/
 }
 
 .switchLabel::after {
